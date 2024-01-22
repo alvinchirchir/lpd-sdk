@@ -1,11 +1,22 @@
 {
   "name": "lpd-sdk",
   "version": "0.0.1",
-  "description": "",
+  "description": "This repository contains a demo application showcasing the usage of Lipad Checkout. The demo covers encryption, payload creation, and checking the status of a checkout session.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Alvin Chirchir",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvinchirchir/lpd-sdk.git"
+  },
+  "keywords": [
+    "lpd"
+  ],
+  "bugs": {
+    "url": "https://github.com/alvinchirchir/lpd-sdk/issues"
+  },
+  "homepage": "https://github.com/alvinchirchir/lpd-sdk#readme"
 }

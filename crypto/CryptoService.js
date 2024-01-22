@@ -20,15 +20,16 @@ class CryptoService {
 			"customer_last_name",
 			"due_date",
 			"merchant_transaction_id",
-			"preferred_payment_option_code",
 			"callback_url",
 			"request_amount",
 			"request_description",
 			"success_redirect_url",
 			"fail_redirect_url",
-			"invoice_number",
-			"language_code",
 			"service_code",
+			//Optional params
+			// "preferred_payment_option_code",
+			// "invoice_number",
+			// "language_code",
 		];
 		const missingKeys = [];
 		for (const key of requiredKeys) {
@@ -53,8 +54,10 @@ class CryptoService {
 		const cipher = crypto.createCipheriv(this.algorithm, secret, key);
 		let encryptedData = cipher.update(JSON.stringify(payload), "utf-8", "hex");
 		encryptedData += cipher.final("hex");
+		console.log(encryptedData)
 		let base64 = Buffer.from(encryptedData, "hex").toString("base64");
 		// console.log("Encrypted message: " + base64);
+
 		return base64;
 	}
 
